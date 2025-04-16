@@ -121,13 +121,13 @@ class FlutterNaverLoginPlugin : FlutterPlugin, MethodCallHandler, ActivityAware 
     // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
     // depending on the user's project. onAttachedToEngine or registerWith must both be defined
     // in the same class.
-    companion object {
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            val channel = MethodChannel(registrar.messenger(), "flutter_naver_login")
-            channel.setMethodCallHandler(FlutterNaverLoginPlugin())
-        }
-    }
+    // companion object {
+    //     @JvmStatic
+    //     fun registerWith(registrar: Registrar) {
+    //         val channel = MethodChannel(registrar.messenger(), "flutter_naver_login")
+    //         channel.setMethodCallHandler(FlutterNaverLoginPlugin())
+    //     }
+    // }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
         this.activity = binding.activity
